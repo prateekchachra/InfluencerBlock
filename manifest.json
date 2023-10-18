@@ -1,0 +1,45 @@
+{
+    "name": "InfluencerBlock for YouTube™ and Twitter/X",
+    "short_name": "InfluencerBlock",
+    "incognito": "spanning",
+    "version": "1.0.0",
+    "description": "Block All Unwanted Influencers and their videos/tweets from YouTube™ and Twitter/X",
+    "manifest_version": 3,
+    "offline_enabled": true,
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self';"
+    },
+    "icons": {
+      "16": "img/icons/icon16.png",
+      "32": "img/icons/icon32.png",
+      "48": "img/icons/icon48.png",
+      "128": "img/icons/icon128.png"
+    },
+    "author": "Prateek Chachra",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "InfluencerBlock"
+    },
+    "permissions": ["contextMenus"],
+    "host_permissions": [
+        "https://*.youtube.com/",
+        "https://*.x.com/",
+        "https://*.twitter.com/"
+    ],
+    "content_scripts": [
+    {
+        "matches": ["https://*.youtube.com/*"],
+        "js": ["js/youtube/youtube.js" ]
+    },
+    {
+        "matches": [
+        "https://*.x.com/",
+        "https://*.twitter.com/"
+        ],
+        "js": ["js/twitter/twitter.js" ]
+    }
+    ],
+    "background": {
+        "service_worker": "js/background/bg.js"
+    }
+}

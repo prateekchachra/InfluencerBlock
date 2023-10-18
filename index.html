@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/popup.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <h1 class="container__header">Select Influencers to Hide:</h1>
+
+    <ul id="list" class="list"></ul>
+    <div id="help-view" class="custom-view hidden">
+      <span class='add-view__subtitle'>Instructions: Highlight channel/user name then right-click</span>
+    </div>
+
+    <div id="add-view" class="custom-view hidden">
+      <span class='add-view__title'>Add list of channels</span>
+      <span class='add-view__subtitle'>(Comma separated list of channel names and/or channel IDs)</span>
+      <div class='add-view__block'>
+        <textarea id='add-view-textarea' class='add-view__textarea'></textarea>
+      </div>
+
+      <br /><br />
+
+      <span class='add-view__title'>Add single channel</span>
+      <div class='add-view__block'>
+        <input id='add-view-channel-id-input' class='add-view__input' type='text' placeholder='Channel ID' />
+        <div class='add-view__input-block'>
+          <input id='add-view-channel-name-input' class='add-view__input add-view__input--split' type='text' placeholder='Channel Name' />
+          <button id='add-view-submit-btn' class='add-view__submit'>Submit</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="controls">
+      <button id="select-all-btn" class="controls__btn btn">Select All</button>
+      <button id="deselect-all-btn" class="controls__btn btn">Deselect All</button>
+      <button id="add-btn" class="controls__btn controls__btn--custom btn">+</button>
+      <button id="help-btn" class="controls__btn btn">?</button>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
