@@ -1,0 +1,29 @@
+{
+    "name": "influencer-block-extension",
+    "version": "1.000",
+    "description": "A browser extension to remove mainstream media results from YouTube™ searches.",
+    "author": "Prateek Chachra <@ThatReactDev on twitter>",
+    "license": "MIT",
+    "homepage": "https://github.com/prateekchachra/InfluencerBlock",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/prateekchachra/InfluencerBlock.git"
+    },
+    "bugs": {
+      "url": "https://github.com/prateekchachra/InfluencerBlock/issues"
+    },
+    "scripts": {
+      "clean": "gulp clean",
+      "dist": "gulp dist"
+    },
+    "devDependencies": {
+      "autoprefixer": "^9.7.3",
+      "gulp": "^4.0.2",
+      "gulp-clean": "^0.4.0",
+      "gulp-clean-css": "^4.2.0",
+      "gulp-concat": "^2.6.1",
+      "gulp-htmlmin": "^5.0.1",
+      "gulp-postcss": "^8.0.0",
+      "gulp-uglify": "^3.0.1"
+    }
+  }
