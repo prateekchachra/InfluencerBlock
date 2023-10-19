@@ -49,11 +49,11 @@ gulp.task('js', () => {
     .pipe(gulp.dest(`dist/${fileName}`));
   };
 
-  promises.push(getPromise('popup', 'lib/js/popup'));
-  promises.push(getPromise('youtube', 'lib/js/youtube/youtube'));
-  promises.push(getPromise('twitter', 'lib/js/twitter/twitter'));
-  promises.push(getPromise('linkedin', 'lib/js/twitter/linkedin'));
-  promises.push(getPromise('bg', 'lib/js/background/bg'));
+  promises.push(getPromise('popup', 'lib/js'));
+  promises.push(getPromise('youtube', 'lib/js/youtube'));
+  promises.push(getPromise('twitter', 'lib/js/twitter'));
+  promises.push(getPromise('linkedin', 'lib/js/linkedin'));
+  promises.push(getPromise('bg', 'lib/js/background'));
 
   return Promise.all(promises);
 });

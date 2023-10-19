@@ -20,7 +20,7 @@
         "default_popup": "popup/index.html",
         "default_title": "InfluencerBlock"
     },
-    "permissions": ["contextMenus"],
+    "permissions": ["contextMenus", "storage"],
     "host_permissions": [
         "https://*.youtube.com/",
         "https://*.x.com/",
@@ -45,6 +45,7 @@
     }
     ],
     "background": {
-        "service_worker": "bg/bg.js"
+        "service_worker": "bg/bg.js",
+        "type": "module"
     }
 }

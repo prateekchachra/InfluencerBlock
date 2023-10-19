@@ -25,7 +25,7 @@ Find me on X: [@ThatReactDev](https://x.com/ThatReactDev).
 
 MIT License
 
-Copyright (c) 2020 Prateek Chachra
+Copyright (c) 2023 Prateek Chachra
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
