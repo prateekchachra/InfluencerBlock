@@ -17,29 +17,34 @@
     },
     "author": "Prateek Chachra",
     "action":{
-        "default_popup": "index.html",
+        "default_popup": "popup/index.html",
         "default_title": "InfluencerBlock"
     },
     "permissions": ["contextMenus"],
     "host_permissions": [
         "https://*.youtube.com/",
         "https://*.x.com/",
-        "https://*.twitter.com/"
+        "https://*.twitter.com/",
+        "https://*.linkedin.com/"
     ],
     "content_scripts": [
     {
         "matches": ["https://*.youtube.com/*"],
-        "js": ["js/youtube/youtube.js" ]
+        "js": ["youtube/youtube.js" ]
+    },
+    {
+        "matches": ["https://*.linkedin.com/*"],
+        "js": ["linkedin/linkedin.js" ]
     },
     {
         "matches": [
         "https://*.x.com/",
         "https://*.twitter.com/"
         ],
-        "js": ["js/twitter/twitter.js" ]
+        "js": ["twitter/twitter.js" ]
     }
     ],
     "background": {
-        "service_worker": "js/background/bg.js"
+        "service_worker": "bg/bg.js"
     }
 }

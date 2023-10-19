@@ -24,7 +24,7 @@ gulp.task('html', () => {
   .pipe(htmlmin({
     collapseWhitespace: true
   }))
-  .pipe(gulp.dest("dist/index"));
+  .pipe(gulp.dest("dist/popup"));
 });
 
 gulp.task('img', () => {
@@ -50,9 +50,10 @@ gulp.task('js', () => {
   };
 
   promises.push(getPromise('popup', 'lib/js/popup'));
-  promises.push(getPromise('youtube', 'lib/js/content/youtube'));
-  promises.push(getPromise('twitter', 'lib/js/content/twitter'));
-  promises.push(getPromise('background', 'lib/js/bg'));
+  promises.push(getPromise('youtube', 'lib/js/youtube/youtube'));
+  promises.push(getPromise('twitter', 'lib/js/twitter/twitter'));
+  promises.push(getPromise('linkedin', 'lib/js/twitter/linkedin'));
+  promises.push(getPromise('bg', 'lib/js/background/bg'));
 
   return Promise.all(promises);
 });
